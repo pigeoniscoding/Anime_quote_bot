@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Anime Quote Alert",
+    "version": "1.0",
+    "description": "Shows anime quotes at specific times of the day.",
+    "permissions": [
+      "alarms",
+      "activeTab",
+      "storage",
+      "tabs"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "browser_action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
